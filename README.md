@@ -21,7 +21,7 @@ Here's an example:
 
 This is an [R-Pentomino](http://www.conwaylife.com/wiki/R-pentomino "R-Pentomino").
 
-X represents the X-value (like on a Euclidean plane, except the origin is the top-right), Y the Y-value and S the state you want that cell to be in. The state is pretty much useless, because everything starts out dead, but eh.
+X represents the X-value, Y the Y-value (like on a Euclidean plane, except the origin is the top-right) and S the state you want that cell to be in. The state is pretty much useless, because everything starts out dead, but eh.
 
 You can also choose to generate a random board. Do this by entering `random/probability of alive cell/probability of dead cell`, like this:
 
