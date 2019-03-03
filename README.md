@@ -2,7 +2,7 @@
 
 This program creates a graph with the number of cells in a CGOL (Conway's Game of Life) game on the y-axis and the generation on the x-axis. Useful if you want to observe patterns in the population.
 
-If you're just looking for software that lets you play around with CGOL, I highly recommend [Golly](https://golly.sourceforge.net "Golly").
+If you're just looking for software that lets you play around with CGOL, I highly recommend [Golly](http://golly.sourceforge.net "Golly").
 
 ## IMPORTANT
 
