@@ -2,15 +2,15 @@
 
 This program creates a graph with the number of cells in a CGOL (Conway's Game of Life) game on the y-axis and the generation on the x-axis. Useful if you want to observe patterns in the population.
 
-##IMPORTANT
+## IMPORTANT
 
 Make sure you have these installed:
-* [Python 3](python.org "Python") (of course)
-* [Matplotlib](matplotlib.org "Matplotlib")
+* [Python 3](https://python.org "Python") (of course)
+* [Matplotlib](https://matplotlib.org "Matplotlib")
 
 You can install Matplotlib by running `pip install matplotlib` in the command prompt (or Terminal if you're using Mac).
 
-##Instructions
+## Instructions
 
 First, you will be asked to input which cells you want to be alive.
 
