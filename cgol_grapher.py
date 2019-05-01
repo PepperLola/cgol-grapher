@@ -16,7 +16,7 @@ print("\nStructure each input like this: x/y/state.")
 print("\nFor example: 10/10/1 would set (10,10) to be alive.")
 print("\nFor multiple inputs, structure it like this: x/y/s;x/y/s;x/y/s")
 print("\nREMEMBER: The matrix starts at index 0, which means the tile or cell \n          in the top left would be 0/0")
-print("\nYou can also enter \"random/probability of 1/probability of 0\" to get a random board.\n")
+print("\nYou can also enter \"random/probability of 1/\" to get a random board.\n")
 inp = input("? ")
 if inp.startswith("random"):
     prob1 = float(inp[inp.find("/")+1:inp.find("/",inp.find("/")+1)])
