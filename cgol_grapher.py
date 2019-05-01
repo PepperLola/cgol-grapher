@@ -1,10 +1,19 @@
 import matplotlib.pyplot as plt
 import time
 import os
+import sys
 import copy
 import numpy as np
 
-a,b = 40,40
+if sys.argv:
+    args = sys.argv
+    args.pop(0)
+    a, b = int(args[0]), int(args[0])
+    print("Using board size {0}x{1}.".format(a, b))
+else:
+    print("Using default board size of 40x40")
+    a,b = 40,40
+
 board1 = [0] * a
 for i in range(a):
     board1[i] = [0] * b
