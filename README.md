@@ -50,3 +50,5 @@ Once the program is finished with the number of generations you inputted, it wil
 ![Graph](https://github.com/PepperLola/cgol-grapher/blob/master/docsbutnotactuallydocs/assets/graph.png?raw=true "Graph")
 
 That's it! You're all done.
+
+pls don't judge
