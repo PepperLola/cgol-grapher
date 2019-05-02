@@ -5,7 +5,7 @@ import sys
 import copy
 import numpy as np
 
-if sys.argv:
+if len(sys.argv) > 1:
     args = sys.argv
     args.pop(0)
     a, b = int(args[0]), int(args[0])
@@ -21,31 +21,31 @@ gen = 0
 pop = 0
 gens = []
 pops = []
-print("\nStructure each input like this: x/y/state.")
-print("\nFor example: 10/10/1 would set (10,10) to be alive.")
-print("\nFor multiple inputs, structure it like this: x/y/s;x/y/s;x/y/s")
+print("\nStructure each input like this: x/y.")
+print("\nFor example: 10/10 would set (10,10) to be alive.")
+print("\nFor multiple inputs, structure it like this: x/y;x/y;x/y")
 print("\nREMEMBER: The matrix starts at index 0, which means the tile or cell \n          in the top left would be 0/0")
-print("\nYou can also enter \"random/probability of 1/\" to get a random board.\n")
+print("\nYou can also enter \"random/probability of 1\" to get a random board.\n")
 inp = input("? ")
 if inp.startswith("random"):
-    prob1 = float(inp[inp.find("/")+1:inp.find("/",inp.find("/")+1)])
+    prob1 = float(inp[inp.find("/")+1:len(inp)])
     prob2 = 1 - prob1
     board1 = np.random.choice([1,0], a*b, p=[prob1, prob2]).reshape(a, b)
 else:
     inps = inp.split(";")
     for inp in inps:
+        if inp == '':
+            break;
         inp_split = inp.split("/")
         x = int(inp_split[0])
         y = int(inp_split[1])
-        state = int(inp_split[2])
+        #useless code because I was an idiot and forgot .split() was a thing
+        #but I spent too much time thinking about it so I don't want to remove it
         #x = int(inp[:inp.find("/")]) #finds the first /
         #y = int(inp[inp.find("/")+1:inp.find("/",inp.find("/")+1)]) #finds the first / after the first /, which is the second /
         #state = int(inp[inp.find("/",inp.find("/")+1)+1:(inp.find("/",inp.find("/",inp.find("/")+1))+1)+(len(inp)-inp.find("/",inp.find("/")+1)+1)]) #finds the first / after the first / after the first /, or the first / after the second /, or just the third /
-        if state != 0 and state != 1:
-            print("Invalid state! The state has to be 0 or 1, not " + str(state))
-            break
-        board1[y][x] = state
-        print("(" + str(x) + "," + str(y) + ") is now " + str(state))
+        board1[y][x] = 1
+        print("(" + str(x) + "," + str(y) + ") is now " + str(1))
 iterations = int(input("\nHow many generations would you like to run? "))
 for gen in range(1, iterations+1):
     board2 = copy.deepcopy(board1)
