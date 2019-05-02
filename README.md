@@ -16,7 +16,9 @@ You can install Matplotlib by running `pip install matplotlib` in the command pr
 
 First, you will have to run the program. To do this, you must navigate to the folder you put the program in and type `python cgol_grapher.py`. This will run the program.
 
-**NOTE:** This will run the program with a grid size of 40x40. If you want a larger or smaller grid, type `python cgol_grapher.py <grid size>`. For example, `python cgol_grapher 128` would run the program with a grid size of 128x128.
+## Command Line Arguments
+
+Without any arguments, the program will run with a 40x40 cell grid size and wait 0.05s in between generations. If you want to change these, you can use `--size` or `--wait`. For example, `python cgol_grapher --size 128 --wait 1` would run the program with a grid size of 128x128 and it would wait 1s in between generations.
 
 Once you run the program, you will be asked to input which cells you want to be alive, like this:
 
