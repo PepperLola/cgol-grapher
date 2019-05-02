@@ -8,14 +8,19 @@ import numpy as np
 
 platform = platform.system()
 
-if len(sys.argv) > 1:
-    args = sys.argv
-    args.pop(0)
-    a, b = int(args[0]), int(args[0])
-    print("Using board size {0}x{1}.".format(a, b))
+args = sys.argv
+
+if "--size" in args:
+    size = int(args[args.index("--size")+1])
+    a, b = size, size
 else:
-    print("Using default board size of 40x40")
     a,b = 40,40
+if "--wait" in args:
+    wait = int(args[args.index("--wait")+1])
+else:
+    wait = 0.05
+
+print("Using board size {0}x{1} and wait value of {2}s.".format(a, b, wait))
 
 board1 = [0] * a
 for i in range(a):
@@ -88,7 +93,7 @@ for gen in range(1, iterations+1):
     board1 = copy.deepcopy(board2)
     #print(board1)
     #R-Pentomino: 10/10;11/10;9/11;10/11;10/12
-    time.sleep(0.05)
+    time.sleep(wait)
 
 print("\nDone!\n")
 
