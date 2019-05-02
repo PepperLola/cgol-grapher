@@ -1,9 +1,12 @@
 import matplotlib.pyplot as plt
 import time
 import os
+import platform
 import sys
 import copy
 import numpy as np
+
+platform = platform.system()
 
 if len(sys.argv) > 1:
     args = sys.argv
@@ -50,7 +53,10 @@ iterations = int(input("\nHow many generations would you like to run? "))
 for gen in range(1, iterations+1):
     board2 = copy.deepcopy(board1)
     boardstr = ""
-    os.system('clear')
+    if platform == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
     pop = 0
     for y in range(0, a):
         for x in range(0,b):
