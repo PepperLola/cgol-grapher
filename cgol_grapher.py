@@ -81,7 +81,7 @@ for gen in range(1, iterations+1):
             #time.sleep(0.1)
     board1 = copy.deepcopy(board2)
     #print(board1)
-    #R-Pentomino: 10/10/1;11/10/1;9/11/1;10/11/1;10/12/1
+    #R-Pentomino: 10/10;11/10;9/11;10/11;10/12
     time.sleep(0.05)
 
 print("\nDone!\n")
