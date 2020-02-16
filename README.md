@@ -18,7 +18,7 @@ First, you will have to run the program. To do this, you must navigate to the fo
 
 ## Command Line Arguments
 
-Without any arguments, the program will run with a 40x40 cell grid size and wait 0.05s in between generations. If you want to change these, you can use `--size` or `--wait`. For example, `python cgol_grapher --size 128 --wait 1` would run the program with a grid size of 128x128 and it would wait 1s in between generations.
+Without any arguments, the program will run with a 40x40 cell grid size and wait 0.05s in between generations. If you want to change these, you can use `--size` or `--wait`. For example, `python cgol_grapher --size 128 --wait 1` would run the program with a grid size of 128x128 and it would wait 1s in between.
 
 Once you run the program, you will be asked to input which cells you want to be alive, like this:
 
